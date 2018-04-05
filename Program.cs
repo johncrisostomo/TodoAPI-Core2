@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using static TodoApi.Startup;
 
 namespace CoreTodoAPI
 {
@@ -19,7 +20,7 @@ namespace CoreTodoAPI
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
+                .UseStartup<TodoApi.Startup>()
                 .Build();
     }
 }
